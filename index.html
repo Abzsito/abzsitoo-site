@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abzsitoo Resale Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Abzsitoo</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Shop</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="home" class="banner">
+    <div class="banner-content">
+      <h1>Welcome to Abzsitoo</h1>
+      <p>Your destination for trendy resale fashion.</p>
+      <a href="#gallery" class="btn">Shop Now</a>
+    </div>
+  </section>
+  <section id="gallery" class="product-gallery">
+    <h2>Featured Products</h2>
+    <div class="gallery-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300?text=Denim+Jacket" alt="Blue Denim Jacket">
+        <h3>Blue Denim Jacket</h3>
+        <p class="price">$49.99</p>
+        <button class="view-btn"
+                data-name="Blue Denim Jacket"
+                data-price="49.99"
+                data-desc="Classic blue denim jacket for all seasons."
+                data-img="https://via.placeholder.com/600x600?text=Denim+Jacket"
+                data-currency="USD">View Details</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x300?text=Polka+Dot+Dress" alt="White Polka-Dot Dress">
+        <h3>Polka-Dot Dress</h3>
+        <p class="price">$39.99</p>
+        <button class="view-btn"
+                data-name="White Polka-Dot Dress"
+                data-price="39.99"
+                data-desc="Elegant white dress with playful black polka dots."
+                data-img="https://via.placeholder.com/600x600?text=Polka+Dot+Dress"
+                data-currency="USD">View Details</button>
+      </div>
+    </div>
+  </section>
+  <div id="productModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImage" src="" alt="Product Image">
+    <h2 id="modalName"></h2>
+    <p id="modalPrice"></p>
+    <p id="modalDesc"></p>
+    <label for="sizeSelect">Size:</label>
+    <select id="sizeSelect">
+      <option value="S">Small</option>
+      <option value="M">Medium</option>
+      <option value="L">Large</option>
+    </select>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="paypalForm">
+      <input type="hidden" name="business" value="your-paypal-email@example.com">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="item_name" value="" id="paypalItemName">
+      <input type="hidden" name="amount" value="" id="paypalAmount">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" name="submit" alt="Buy Now">
+    </form>
+  </div>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="you@example.com" required>
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" placeholder="Your message..."></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
